@@ -17,9 +17,8 @@ function _M.default(value)
 end
 
 function _M.cidr(cidr, value, override)
-	local lower, upper = iputils.parse_cidr(cidr)
-
 	if (override or not cidr_mapping[cidr]) then
+		local lower, upper = iputils.parse_cidr(cidr)
 		cidr_mapping[cidr] = { { lower, upper }, value }
 	end
 end

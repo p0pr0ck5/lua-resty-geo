@@ -1,16 +1,16 @@
-#lua-resty-geo
+# lua-resty-geo
 
 Lightweight module to mimic ngx_http_geo_module
 
-##Status
+## Status
 
 This library is in active development and is production ready.
 
-##Dependencies
+## Dependencies
 
 This library makes use of the [lua-resty-iputils](https://github.com/hamishforbes/lua-resty-iputils) library.
 
-##Synopsis
+## Synopsis
 
 ```lua
 	http {
@@ -39,21 +39,21 @@ This library makes use of the [lua-resty-iputils](https://github.com/hamishforbe
 	}
 ```
 
-##Functions
+## Functions
 
-###geo.default(value)
+### geo.default(value)
 
 Define the default value for geo to return if no CIDRs match.
 
-###geo.enable_iputils_cache(size?)
+### geo.enable_iputils_cache(size?)
 
 Enable the LRU cache for `lua-resty-iputils`. This is just a wrapper for the `iputils` call.
 
-###geo.cidr(cidr, value, override?)
+### geo.cidr(cidr, value, override?)
 
 Define a CIDR block and the value to return if the CIDR matches. If you want to update the value of the CIDR entry on each request (e.g. outside of the `init_by_lua` phase), you must specify the `override` value as `true`. This is useful when you want to return a per-request variable, such as an `ngx.var` entry.
 
-###License
+### License
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -68,7 +68,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>
 
-###Bugs
+### Bugs
 
 Please report bugs by creating a ticket with the GitHub issue tracker.
 
